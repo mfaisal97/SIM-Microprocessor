@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="OperandTypes">
+      <UniqueIdentifier>{00e80908-f6fe-4d51-a8a6-1960e72b535d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OperandTypes\Headers">
+      <UniqueIdentifier>{6ed7f3f3-7dea-46d9-aae9-fb5934e8611a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Memory">
+      <UniqueIdentifier>{e3501d50-b3fd-4cf2-9f89-ef4133a41869}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Memory\Headers">
+      <UniqueIdentifier>{fd244582-0f82-46c6-aba3-23612211364d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="InstructionTypes">
+      <UniqueIdentifier>{1d3e6202-6539-44ad-8f9b-50d414d38874}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="InstructionTypes\Headers">
+      <UniqueIdentifier>{e018dbe7-547e-4527-8f4b-22306bde3dfb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SIM-Microprocessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Simulator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IntOperand.cpp">
+      <Filter>OperandTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="AddressOperand.cpp">
+      <Filter>OperandTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Operand.cpp">
+      <Filter>OperandTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="InstructionMemory.cpp">
+      <Filter>Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="DataMemory.cpp">
+      <Filter>Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory.cpp">
+      <Filter>Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Instruction.cpp">
+      <Filter>InstructionTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="AddInstruction.cpp">
+      <Filter>InstructionTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="AssignmentInstruction.cpp">
+      <Filter>InstructionTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="HaltInstruction.cpp">
+      <Filter>InstructionTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="JMP0Instruction.cpp">
+      <Filter>InstructionTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="JMPInstruction.cpp">
+      <Filter>InstructionTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="LessThanInstruction.cpp">
+      <Filter>InstructionTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiplyInstruction.cpp">
+      <Filter>InstructionTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="NegativeInstruction.cpp">
+      <Filter>InstructionTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="READInstruction.cpp">
+      <Filter>InstructionTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="WriteInstruction.cpp">
+      <Filter>InstructionTypes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Simulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IntOperand.h">
+      <Filter>OperandTypes\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="AddressOperand.h">
+      <Filter>OperandTypes\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory.h">
+      <Filter>Memory\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Operand.h">
+      <Filter>OperandTypes\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="DataMemory.h">
+      <Filter>Memory\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="InstructionMemory.h">
+      <Filter>Memory\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Instruction.h">
+      <Filter>InstructionTypes\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="AddInstruction.h">
+      <Filter>InstructionTypes\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="AssignmentInstruction.h">
+      <Filter>InstructionTypes\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="HaltInstruction.h">
+      <Filter>InstructionTypes\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="JMP0Instruction.h">
+      <Filter>InstructionTypes\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="JMPInstruction.h">
+      <Filter>InstructionTypes\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="LessThanInstruction.h">
+      <Filter>InstructionTypes\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiplyInstruction.h">
+      <Filter>InstructionTypes\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="NegativeInstruction.h">
+      <Filter>InstructionTypes\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="READInstruction.h">
+      <Filter>InstructionTypes\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="WriteInstruction.h">
+      <Filter>InstructionTypes\Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
