@@ -110,6 +110,45 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AddInstruction.cpp" />
+    <ClCompile Include="AddressOperand.cpp" />
+    <ClCompile Include="AssignmentInstruction.cpp" />
+    <ClCompile Include="DataMemory.cpp" />
+    <ClCompile Include="HaltInstruction.cpp" />
+    <ClCompile Include="Instruction.cpp" />
+    <ClCompile Include="InstructionMemory.cpp" />
+    <ClCompile Include="IntOperand.cpp" />
+    <ClCompile Include="JMP0Instruction.cpp" />
+    <ClCompile Include="JMPInstruction.cpp" />
+    <ClCompile Include="LessThanInstruction.cpp" />
+    <ClCompile Include="Memory.cpp" />
+    <ClCompile Include="MultiplyInstruction.cpp" />
+    <ClCompile Include="NegativeInstruction.cpp" />
+    <ClCompile Include="Operand.cpp" />
+    <ClCompile Include="READInstruction.cpp" />
+    <ClCompile Include="SIM-Microprocessor.cpp" />
+    <ClCompile Include="Simulator.cpp" />
+    <ClCompile Include="WriteInstruction.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddInstruction.h" />
+    <ClInclude Include="AddressOperand.h" />
+    <ClInclude Include="AssignmentInstruction.h" />
+    <ClInclude Include="DataMemory.h" />
+    <ClInclude Include="HaltInstruction.h" />
+    <ClInclude Include="Instruction.h" />
+    <ClInclude Include="InstructionMemory.h" />
+    <ClInclude Include="IntOperand.h" />
+    <ClInclude Include="JMP0Instruction.h" />
+    <ClInclude Include="JMPInstruction.h" />
+    <ClInclude Include="LessThanInstruction.h" />
+    <ClInclude Include="Memory.h" />
+    <ClInclude Include="MultiplyInstruction.h" />
+    <ClInclude Include="NegativeInstruction.h" />
+    <ClInclude Include="Operand.h" />
+    <ClInclude Include="READInstruction.h" />
+    <ClInclude Include="Simulator.h" />
+    <ClInclude Include="WriteInstruction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
