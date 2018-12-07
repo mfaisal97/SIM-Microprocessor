@@ -9,7 +9,8 @@ protected:
 	virtual inline bool ValidData(const int &) const;
 
 public:
-	AddressOperand(const int &);
+	AddressOperand();
+	AddressOperand(int);
 	~AddressOperand();
 
 };

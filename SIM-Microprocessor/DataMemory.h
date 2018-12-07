@@ -1,7 +1,8 @@
 #pragma once
 #include "Memory.h"
+
 class DataMemory :
-	public Memory
+	public Memory<int>
 {
 public:
 	DataMemory();

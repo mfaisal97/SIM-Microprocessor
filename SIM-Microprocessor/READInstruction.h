@@ -1,10 +1,13 @@
 #pragma once
-#include "Instruction.h"
+#include "OneOperandInstruction.h"
+
 class READInstruction :
-	public Instruction
+	public OneOperandInstruction
 {
 public:
 	READInstruction();
 	~READInstruction();
+
+	virtual void Execute(DataMemory & mem, AddressOperand& counter) const;
 };
 

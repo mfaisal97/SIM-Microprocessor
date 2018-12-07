@@ -11,8 +11,10 @@ protected:
 
 public:
 
-	Operand(const T & data);
+	Operand();
+	Operand(T data);
 	~Operand();
-	const T& GetData() const;
+	T GetData() const;
+	void SetData(T);
 };
 

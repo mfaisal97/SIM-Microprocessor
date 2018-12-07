@@ -1,17 +1,16 @@
 #pragma once
 #include "Instruction.h"
-#include "AddressOperand.h"
 
 class JMPInstruction :
 	public Instruction
 {
-private:
-	AddressOperand getToAddr;
+protected:
+	AddressOperand goToAddr;
 
 public:
 	JMPInstruction();
 	~JMPInstruction();
 
-	virtual void Execute(DataMemory& mem) const;
+	virtual void Execute(DataMemory & mem, AddressOperand& counter) const;
 };
 

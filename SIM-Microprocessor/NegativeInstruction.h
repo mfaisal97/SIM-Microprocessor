@@ -1,20 +1,14 @@
 #pragma once
-#include "Instruction.h"
-#include "Operand.h"
-#include "AddressOperand.h"
+#include "TwoOperandInstruction.h"
 
 class NegativeInstruction :
-	public Instruction
+	public TwoOperandInstruction
 {
-private:
-	Operand<int> in;
-
-	AddressOperand out;
 
 public:
 	NegativeInstruction();
 	~NegativeInstruction();
 
-	virtual void Execute(DataMemory& mem) const;
+	virtual void Execute(DataMemory & mem, AddressOperand& counter) const;
 };
 

@@ -1,10 +1,13 @@
 #pragma once
-#include "Instruction.h"
+#include "ThreeOperandInstruction.h"
+
 class LessThanInstruction :
-	public Instruction
+	public ThreeOperandInstruction
 {
 public:
 	LessThanInstruction();
 	~LessThanInstruction();
+
+	virtual void Execute(DataMemory & mem, AddressOperand& counter) const;
 };
 

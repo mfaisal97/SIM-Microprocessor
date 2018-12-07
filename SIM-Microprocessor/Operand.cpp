@@ -1,7 +1,12 @@
 #include "Operand.h"
 
 template<typename T>
-Operand<T>::Operand(const T & data)
+Operand<T>::Operand()
+{
+}
+
+template<typename T>
+Operand<T>::Operand(T data)
 {
 	if (ValidData(data)) {
 		this->Data = data;
@@ -26,7 +31,18 @@ inline bool Operand<T>::ValidData(const T & data) const
 }
 
 template<typename T>
-const T& Operand<T>::GetData()  const
+T Operand<T>::GetData()  const
 {
 	return this->Data;
+}
+
+template<typename T>
+void Operand<T>::SetData(T data)
+{
+	if (ValidData(data)) {
+		Data = data;
+	}
+	else {
+		cout << "Error: value " << data << "Can not be set in this operand\n";
+	}
 }

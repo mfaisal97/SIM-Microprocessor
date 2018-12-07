@@ -4,6 +4,7 @@
 
 DataMemory::DataMemory()
 {
+	
 }
 
 

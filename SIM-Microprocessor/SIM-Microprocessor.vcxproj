@@ -122,6 +122,7 @@
     <ClCompile Include="HaltInstruction.cpp" />
     <ClCompile Include="Instruction.cpp" />
     <ClCompile Include="InstructionMemory.cpp" />
+    <ClCompile Include="InstructionsParser.cpp" />
     <ClCompile Include="IntOperand.cpp" />
     <ClCompile Include="JMP0Instruction.cpp" />
     <ClCompile Include="JMPInstruction.cpp" />
@@ -129,10 +130,13 @@
     <ClCompile Include="Memory.cpp" />
     <ClCompile Include="MultiplyInstruction.cpp" />
     <ClCompile Include="NegativeInstruction.cpp" />
+    <ClCompile Include="OneOperandInstruction.cpp" />
     <ClCompile Include="Operand.cpp" />
     <ClCompile Include="READInstruction.cpp" />
     <ClCompile Include="SIM-Microprocessor.cpp" />
     <ClCompile Include="Simulator.cpp" />
+    <ClCompile Include="ThreeOperandInstruction.cpp" />
+    <ClCompile Include="TwoOperandInstruction.cpp" />
     <ClCompile Include="WriteInstruction.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +147,8 @@
     <ClInclude Include="HaltInstruction.h" />
     <ClInclude Include="Instruction.h" />
     <ClInclude Include="InstructionMemory.h" />
+    <ClInclude Include="InstructionsHeader.h" />
+    <ClInclude Include="InstructionsParser.h" />
     <ClInclude Include="IntOperand.h" />
     <ClInclude Include="JMP0Instruction.h" />
     <ClInclude Include="JMPInstruction.h" />
@@ -150,9 +156,12 @@
     <ClInclude Include="Memory.h" />
     <ClInclude Include="MultiplyInstruction.h" />
     <ClInclude Include="NegativeInstruction.h" />
+    <ClInclude Include="OneOperandInstruction.h" />
     <ClInclude Include="Operand.h" />
     <ClInclude Include="READInstruction.h" />
     <ClInclude Include="Simulator.h" />
+    <ClInclude Include="ThreeOperandInstruction.h" />
+    <ClInclude Include="TwoOperandInstruction.h" />
     <ClInclude Include="WriteInstruction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

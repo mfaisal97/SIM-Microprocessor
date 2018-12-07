@@ -1,10 +1,14 @@
 #pragma once
-#include "Instruction.h"
+#include "TwoOperandInstruction.h"
+
 class AssignmentInstruction :
-	public Instruction
+	public TwoOperandInstruction
 {
+
 public:
 	AssignmentInstruction();
 	~AssignmentInstruction();
+
+	virtual void Execute(DataMemory & mem, AddressOperand& counter) const;
 };
 

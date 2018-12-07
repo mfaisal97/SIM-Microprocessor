@@ -1,8 +1,6 @@
 #pragma once
 #include "AddressOperand.h"
 
-
-
 template <typename T>
 class Memory
 {
@@ -16,9 +14,9 @@ public:
 	Memory();
 	~Memory();
 
-	const T& GetDataAt(const AddressOperand& addr) const;
+	T& GetDataAt(const AddressOperand&) const;
 
-	void SetDataAt(const AddressOperand& addr, T data);
+	void SetDataAt(const AddressOperand&, T);
 
-	bool IsInitialized(const AddressOperand& addr) const;
+	bool IsInitialized(const AddressOperand& ) const;
 };
