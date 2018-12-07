@@ -1,0 +1,11 @@
+#pragma once
+#include "AddInstruction.h"
+#include "NegativeInstruction.h"
+#include "MultiplyInstruction.h"
+#include "JMPInstruction.h"
+#include "JMP0Instruction.h"
+#include "AssignmentInstruction.h"
+#include "LessThanInstruction.h"
+#include "READInstruction.h"
+#include "WriteInstruction.h"
+#include "HaltInstruction.h"
