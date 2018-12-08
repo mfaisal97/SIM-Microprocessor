@@ -13,12 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="OperandTypes">
-      <UniqueIdentifier>{00e80908-f6fe-4d51-a8a6-1960e72b535d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="OperandTypes\Headers">
-      <UniqueIdentifier>{6ed7f3f3-7dea-46d9-aae9-fb5934e8611a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Memory">
       <UniqueIdentifier>{e3501d50-b3fd-4cf2-9f89-ef4133a41869}</UniqueIdentifier>
     </Filter>
@@ -34,11 +28,17 @@
     <Filter Include="InstructionTypes\Implementation">
       <UniqueIdentifier>{753302e2-d6a8-4441-97dd-d812ddf4eb67}</UniqueIdentifier>
     </Filter>
-    <Filter Include="OperandTypes\Implementation">
-      <UniqueIdentifier>{d2bd31fc-b29f-47fb-a8ff-83064cfb3568}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Memory\Implementation">
       <UniqueIdentifier>{c891f76b-0976-45c4-bf20-787189eec96b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OperandTypes">
+      <UniqueIdentifier>{00e80908-f6fe-4d51-a8a6-1960e72b535d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OperandTypes\Headers">
+      <UniqueIdentifier>{6ed7f3f3-7dea-46d9-aae9-fb5934e8611a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OperandTypes\Implementation">
+      <UniqueIdentifier>{d2bd31fc-b29f-47fb-a8ff-83064cfb3568}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

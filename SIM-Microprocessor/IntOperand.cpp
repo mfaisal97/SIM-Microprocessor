@@ -1,7 +1,7 @@
 #include "IntOperand.h"
 
 
-IntOperand::IntOperand(const int& data) : Operand<int>(data)
+IntOperand::IntOperand(int data) : Operand<int>(data)
 {
 }
 

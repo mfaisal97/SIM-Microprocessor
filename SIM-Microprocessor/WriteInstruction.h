@@ -5,6 +5,7 @@ class WriteInstruction :
 	public OneOperandInstruction
 {
 public:
+	WriteInstruction(std::string inst);
 	WriteInstruction();
 	~WriteInstruction();
 

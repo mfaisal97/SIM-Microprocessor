@@ -4,8 +4,11 @@ class OneOperandInstruction :
 	public Instruction
 {
 protected:
-	Operand<int> addr;
+	Operand<int>* addr;
+	virtual void ParseOperands(std::string &str);
+
 public:
+	OneOperandInstruction(std::string inst);
 	OneOperandInstruction();
 	~OneOperandInstruction();
 

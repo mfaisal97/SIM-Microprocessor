@@ -5,6 +5,7 @@ class MultiplyInstruction :
 	public ThreeOperandInstruction
 {
 public:
+	MultiplyInstruction(std::string inst);
 	MultiplyInstruction();
 	~MultiplyInstruction();
 

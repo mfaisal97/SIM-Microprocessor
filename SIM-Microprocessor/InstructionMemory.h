@@ -1,25 +1,24 @@
 #pragma once
 #include "Instruction.h"
+#include "HaltInstruction.h"
 #include "Memory.h"
 #include "DataMemory.h"
 
-typedef Memory<Instruction> bengo;
-
 class InstructionMemory:
-	public bengo
+	public Memory<Instruction>
 {
 private:
-	AddressOperand counter = 0;
+	AddressOperand* counter;
 	DataMemory& mem;
-	AddressOperand maxCurrent = 0;
+	AddressOperand* maxCurrent;
 
 public:
 	InstructionMemory(DataMemory& m);
 	~InstructionMemory();
 
-	void SetCounter(AddressOperand);
-	AddressOperand GetCounter();
-	void ExecuteCounterInstruction();
-	void AddInstruction(Instruction);
+	void SetCounter(AddressOperand*);
+	AddressOperand* GetCounter();
+	bool ExecuteCounterInstruction();
+	void AddInstruction(Instruction*);
 };
 

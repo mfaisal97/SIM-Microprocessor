@@ -5,18 +5,66 @@ template <typename T>
 class Memory
 {
 protected :
-	T* DataBank;
+	T** DataBank;
 	bool* Initialized;
 
 public:
-	static const int size = 1024;
 
 	Memory();
 	~Memory();
 
-	T& GetDataAt(const AddressOperand&) const;
+	virtual T* GetDataAt(AddressOperand*);
 
-	void SetDataAt(const AddressOperand&, T);
+	virtual void SetDataAt(AddressOperand*, T*);
 
-	bool IsInitialized(const AddressOperand& ) const;
+	virtual bool IsInitialized(AddressOperand* ) const;
 };
+
+template<typename T>
+Memory<T>::Memory()
+{
+	DataBank = new T*[AddressOperand::size];
+	Initialized = new bool[AddressOperand::size];
+
+	for (int i = 0; i < AddressOperand::size; ++i) {
+		Initialized[i] = 0;
+	}
+}
+
+template<typename T>
+Memory<T>::~Memory()
+{
+	delete[]DataBank;
+	delete[]Initialized;
+}
+
+template<typename T>
+T* Memory<T>::GetDataAt(AddressOperand* addr)
+{
+	if (IsInitialized(addr)) {
+		return DataBank[*(addr->GetData())];
+	}
+	else {
+		std::cout << "Out of Boundary Error. Trying to read unitialized memory.\n";
+		exit(0);
+	}
+
+}
+
+template<typename T>
+void Memory<T>::SetDataAt(AddressOperand* addr, T* data)
+{
+	if (IsInitialized(addr)) {
+		T* d = DataBank[*(addr->GetData())];
+		delete d;
+	}
+	DataBank[*(addr->GetData())] = data;
+	Initialized[*(addr->GetData())] = true;
+}
+
+template<typename T>
+bool Memory<T>::IsInitialized(AddressOperand* addr) const
+{
+	return Initialized[*(addr->GetData())];
+}
+

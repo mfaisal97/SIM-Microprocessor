@@ -5,6 +5,7 @@ class HaltInstruction :
 	public Instruction
 {
 public:
+	HaltInstruction(std::string inst);
 	HaltInstruction();
 	~HaltInstruction();
 

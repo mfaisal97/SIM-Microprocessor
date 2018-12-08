@@ -6,6 +6,7 @@ class NegativeInstruction :
 {
 
 public:
+	NegativeInstruction(std::string inst);
 	NegativeInstruction();
 	~NegativeInstruction();
 

@@ -17,5 +17,5 @@ AddressOperand::~AddressOperand()
 
 bool AddressOperand::ValidData(const int & data) const
 {
-	return data >=0 && data < Memory<int>::size;
+	return data >=0 && data < size;
 }

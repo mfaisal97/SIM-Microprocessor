@@ -5,12 +5,14 @@ class JMPInstruction :
 	public Instruction
 {
 protected:
-	AddressOperand goToAddr;
+	AddressOperand* goToAddr;
 
 public:
+	JMPInstruction(std::string inst);
 	JMPInstruction();
 	~JMPInstruction();
 
 	virtual void Execute(DataMemory & mem, AddressOperand& counter) const;
+	virtual void ParseOperands(std::string &str);
 };
 

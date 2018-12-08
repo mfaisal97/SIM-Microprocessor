@@ -4,9 +4,8 @@ class IntOperand :
 	public Operand<int>
 {
 public:
-	IntOperand(const int &);
+	IntOperand(int);
 	~IntOperand();
 
 	virtual inline bool ValidData(const int &) const;
 };
-

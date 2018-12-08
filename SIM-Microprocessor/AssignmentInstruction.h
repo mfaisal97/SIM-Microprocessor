@@ -6,6 +6,7 @@ class AssignmentInstruction :
 {
 
 public:
+	AssignmentInstruction(std::string inst);
 	AssignmentInstruction();
 	~AssignmentInstruction();
 

@@ -2,13 +2,15 @@
 #include <queue>
 #include <string>
 #include <fstream>
+#include <sstream>
+#include <algorithm>
 #include "InstructionsHeader.h"
 
 
 class InstructionsParser
 {
 private:
-	std::queue <Instruction> FetchedInstructions;
+	std::queue <Instruction*> FetchedInstructions;
 
 public:
 	InstructionsParser();
@@ -17,6 +19,6 @@ public:
 	bool AddInstructionsFromFile(std::string fileName);
 	bool AddInstructionFromString(std::string instStr);
 
-	Instruction NextFetchedInstruction();
+	Instruction* NextFetchedInstruction();
+	bool HasInstructions();
 };
-

@@ -5,6 +5,7 @@ class AddInstruction :
 	public ThreeOperandInstruction
 {
 public:
+	AddInstruction(std::string inst);
 	AddInstruction();
 	virtual ~AddInstruction();
 
