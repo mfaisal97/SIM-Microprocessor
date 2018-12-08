@@ -58,16 +58,15 @@ void Simulator::GetHelp()
 {
 	std::cout << "*********************************************\n";
 	std::cout << "Please, choose one of the following commands:\n";
-	std::cout << "AddFile\t{file_name}\t\t\tTo add new instructions from file\n";
-	std::cout << "AddInst\t{Instruction}\t\t\tTo add new instruction directly\n";
-	std::cout << "ExNext\t\t\t\tTo Excute the following instruction\n";
-	std::cout << "ExAll\t\t\t\tTo Excute all the remaining instructions\n";
-	std::cout << "QMD\t{Data_address}\t\t\tTo get the current corresponding value for this address\n";
+	std::cout << "AddFile\t{file_name}\t\t\t\tTo add new instructions from file\n";
+	std::cout << "AddInst\t{Instruction}\t\t\t\tTo add new instruction directly\n";
+	std::cout << "ExNext\t\t\t\t\t\tTo Excute the following instruction\n";
+	std::cout << "ExAll\t\t\t\t\t\tTo Excute all the remaining instructions\n";
+	std::cout << "QMD\t{Data_address}\t\t\t\tTo get the current corresponding value for this address\n";
 	std::cout << "QID\t{Instruction_address}\t\t\tTo get the corresponding instruction for this address\n";
-	std::cout << "Help\t\t\t\tTo get the view this help dialogue again\n";
-	std::cout << "Exit\t\t\t\tTo end the simulation\n";
-	std::cout << "*********************************************\n";
-
+	std::cout << "Help\t\t\t\t\t\tTo get the view this help dialogue again\n";
+	std::cout << "Exit\t\t\t\t\t\tTo end the simulation\n";
+	std::cout << "*********************************************\n\n\n";
 }
 
 void Simulator::ParseCommand(std::string & str)
@@ -82,13 +81,17 @@ void Simulator::ParseCommand(std::string & str)
 
 	if (command == "addfile")
 	{
+		strStream >> command;
 		std::string name;
-		std::getline(std::cin, name);
+		std::getline(strStream, name);
+		name += command;
 		AddFile(name);
 	}
 	else if (command == "addinst") {
+		strStream >> command;
 		std::string inst;
-		std::getline(std::cin, inst);
+		std::getline(strStream, inst);
+		inst += command;
 		AddInstruction(inst);
 	}
 	else if (command == "exnext") {
@@ -125,6 +128,7 @@ void Simulator::Start()
 	GetHelp();
 	while (simRunning)
 	{
+		std::cout << "$ ";
 		std::string str;
 		std::getline(std::cin, str);
 		ParseCommand(str);
