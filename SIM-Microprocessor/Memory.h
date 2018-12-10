@@ -46,9 +46,7 @@ T* Memory<T>::GetDataAt(AddressOperand* addr)
 	}
 	else {
 		std::cout << "Out of Boundary Error. Trying to read unitialized memory.\n";
-		exit(0);
 	}
-
 }
 
 template<typename T>
