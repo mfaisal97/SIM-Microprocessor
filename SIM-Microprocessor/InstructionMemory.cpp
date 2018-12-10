@@ -45,5 +45,10 @@ bool InstructionMemory::ExecuteCounterInstruction()
 void InstructionMemory::AddInstruction(Instruction* inst)
 {
 	SetDataAt(maxCurrent, inst);
-	maxCurrent->SetData(*(maxCurrent->GetData()));
+	maxCurrent->SetData(*(maxCurrent->GetData()) + 1);
+}
+
+int InstructionMemory::GetMaxCurrent()
+{
+	return *maxCurrent->GetData();
 }
