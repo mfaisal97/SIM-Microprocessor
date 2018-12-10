@@ -26,7 +26,15 @@ HALT
 2) Some operands are allowed to either addresses or operands
 3) Address Operands should be preceeded directly by x i.e x0 or x1
 4) For immediate values and memory addresses kindly use decimal representations.
-
+5) Comments are allowed at the start of each line by the symbol #.
+6) Comments can inserted after each instruction in its same line with optional #.
+7) Each line has a maximum of one instruction provided that the instruction starts with the start of the line.
+8) Instructions can be written in upper cases or lower cases.
+9) Parsing consider after number text as a visual option to improve readability.
+10) 
 
 # Notes on Usage
+1) Trying to access unitialized memory address results in a warning and returning a default value (changeable in the memory class).
+2) 
+
 
