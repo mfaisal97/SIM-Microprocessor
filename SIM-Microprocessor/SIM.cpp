@@ -1,18 +1,18 @@
-#include "Simulator.h"
+#include "SIM.h"
 
 
 
-Simulator::Simulator():instMem(mem)
+SIM::SIM():instMem(mem)
 {
 	simRunning = true;
 }
 
 
-Simulator::~Simulator()
+SIM::~SIM()
 {
 }
 
-void Simulator::AddFile(std::string FileName)
+void SIM::AddFile(std::string FileName)
 {
 	instParser.AddInstructionsFromFile(FileName);
 
@@ -21,7 +21,7 @@ void Simulator::AddFile(std::string FileName)
 	}
 }
 
-void Simulator::AddInstruction(std::string str)
+void SIM::AddInstruction(std::string str)
 {
 	instParser.AddInstructionFromString(str);
 
@@ -30,31 +30,31 @@ void Simulator::AddInstruction(std::string str)
 	}
 }
 
-void Simulator::ExecuteNextInstruction()
+void SIM::ExecuteNextInstruction()
 {
 	instMem.ExecuteCounterInstruction();
 }
 
-void Simulator::ExcuteAllFetchedInstructions()
+void SIM::ExcuteAllFetchedInstructions()
 {
 	while (instMem.ExecuteCounterInstruction()) {
 		system("pause");
 	}
 }
 
-void Simulator::QueryMemoryData(AddressOperand addr)
+void SIM::QueryMemoryData(AddressOperand addr)
 {
 	std::cout << "mem[" << *addr.GetData() << "] = " << *mem.GetDataAt(&addr) << "\n";
 }
 
-void Simulator::QueryInstMemory(AddressOperand addr)
+void SIM::QueryInstMemory(AddressOperand addr)
 {
 	std::cout << "instmem[" << *addr.GetData() << "] = ";
 	instMem.GetDataAt(&addr)->Print();
 	std::cout << "\n";
 }
 
-void Simulator::QueryAllInstMemory()
+void SIM::QueryAllInstMemory()
 {
 	int maxcurr = instMem.GetMaxCurrent() -1;
 	for (int i = 0; i <= maxcurr; ++i) {
@@ -66,7 +66,7 @@ void Simulator::QueryAllInstMemory()
 
 }
 
-void Simulator::GetHelp()
+void SIM::GetHelp()
 {
 	std::cout << "*********************************************\n";
 	std::cout << "Please, choose one of the following commands:\n";
@@ -82,7 +82,7 @@ void Simulator::GetHelp()
 	std::cout << "*********************************************\n\n\n";
 }
 
-void Simulator::ParseCommand(std::string & str)
+void SIM::ParseCommand(std::string & str)
 {
 	std::istringstream strStream(str);
 	std::string command;
@@ -148,7 +148,7 @@ void Simulator::ParseCommand(std::string & str)
 	}
 }
 
-void Simulator::Start()
+void SIM::Start()
 {
 	GetHelp();
 	while (simRunning)

@@ -3,7 +3,7 @@
 #include "DataMemory.h"
 #include "InstructionsParser.h"
 
-class Simulator
+class SIM
 {
 private:
 	DataMemory mem;
@@ -22,8 +22,8 @@ private:
 	void ParseCommand(std::string& str);
 
 public:
-	Simulator();
-	~Simulator();
+	SIM();
+	~SIM();
 
 	void Start();
 };

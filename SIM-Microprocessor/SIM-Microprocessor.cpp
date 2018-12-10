@@ -1,12 +1,12 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
-#include "Simulator.h"
+#include "SIM.h"
 
 using namespace std;
 
 int main() {
-	Simulator sim;
+	SIM sim;
 	sim.Start();
 
 	system("pause");

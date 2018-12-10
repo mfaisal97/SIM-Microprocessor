@@ -45,9 +45,6 @@
     <ClCompile Include="SIM-Microprocessor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Simulator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="AddInstruction.cpp">
       <Filter>InstructionTypes\Implementation</Filter>
     </ClCompile>
@@ -111,11 +108,11 @@
     <ClCompile Include="InstructionsParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SIM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Simulator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="IntOperand.h">
       <Filter>OperandTypes\Headers</Filter>
     </ClInclude>
@@ -180,6 +177,9 @@
       <Filter>InstructionTypes\Headers</Filter>
     </ClInclude>
     <ClInclude Include="InstructionsParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SIM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

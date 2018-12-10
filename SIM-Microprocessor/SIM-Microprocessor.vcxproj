@@ -135,7 +135,7 @@
     <ClCompile Include="Operand.cpp" />
     <ClCompile Include="READInstruction.cpp" />
     <ClCompile Include="SIM-Microprocessor.cpp" />
-    <ClCompile Include="Simulator.cpp" />
+    <ClCompile Include="SIM.cpp" />
     <ClCompile Include="ThreeOperandInstruction.cpp" />
     <ClCompile Include="TwoOperandInstruction.cpp" />
     <ClCompile Include="WriteInstruction.cpp" />
@@ -160,7 +160,7 @@
     <ClInclude Include="OneOperandInstruction.h" />
     <ClInclude Include="Operand.h" />
     <ClInclude Include="READInstruction.h" />
-    <ClInclude Include="Simulator.h" />
+    <ClInclude Include="SIM.h" />
     <ClInclude Include="ThreeOperandInstruction.h" />
     <ClInclude Include="TwoOperandInstruction.h" />
     <ClInclude Include="WriteInstruction.h" />
