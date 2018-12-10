@@ -9,7 +9,7 @@ Operand<int>* Instruction::GetAnyOperand(std::string str)
 		int val = strtoll(str.c_str(), NULL,0);
 		return new AddressOperand(val);
 	}
-	else if (isdigit(str[0])) {
+	else if (isdigit(str[0]) || (str.size()>0 && isdigit(str[1]))) {
 		int val = strtoll(str.c_str(), NULL, 0);
 		return new IntOperand(val);
 	}
