@@ -1,8 +1,15 @@
 #include "IntOperand.h"
 
 
-IntOperand::IntOperand(int data) : Operand<int>(data)
+IntOperand::IntOperand(int data)
 {
+	if (this->ValidData(data)) {
+		this->Data = data;
+	}
+	else {
+		std::cout << "Error parsing Operand!\n";
+		exit(0);
+	}
 }
 
 
