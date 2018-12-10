@@ -16,7 +16,8 @@ private:
 	void ExecuteNextInstruction();
 	void ExcuteAllFetchedInstructions();
 	void QueryMemoryData(AddressOperand);
-	void QueryInstData(AddressOperand);
+	void QueryInstMemory(AddressOperand);
+	void QueryAllInstMemory();
 	void GetHelp();
 	void ParseCommand(std::string& str);
 

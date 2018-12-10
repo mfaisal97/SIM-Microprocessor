@@ -20,5 +20,6 @@ public:
 	AddressOperand* GetCounter();
 	bool ExecuteCounterInstruction();
 	void AddInstruction(Instruction*);
+	int GetMaxCurrent();
 };
 
