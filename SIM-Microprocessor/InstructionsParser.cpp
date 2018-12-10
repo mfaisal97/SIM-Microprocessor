@@ -50,38 +50,35 @@ bool InstructionsParser::AddInstructionFromString(std::string instStr)
 	}
 
 	if (command == "add") {
-		AddInstruction* addinst = new AddInstruction(restOfCommand);
-		addinst->Print();
-		std::cout << restOfCommand << "\n";
-		FetchedInstructions.push(addinst);
-	}/*
+		FetchedInstructions.push(new AddInstruction(restOfCommand));
+	}
 	else if (command == "neg") {
-		FetchedInstructions.push(NegativeInstruction(restOfCommand));
+		FetchedInstructions.push(new NegativeInstruction(restOfCommand));
 	}
 	else if (command == "mul") {
-		FetchedInstructions.push(MultiplyInstruction(restOfCommand));
+		FetchedInstructions.push(new MultiplyInstruction(restOfCommand));
 	}
 	else if (command == "jmp") {
-		FetchedInstructions.push(JMPInstruction(restOfCommand));
+		FetchedInstructions.push(new JMPInstruction(restOfCommand));
 	}
 	else if (command == "jmp0") {
-		FetchedInstructions.push(JMP0Instruction(restOfCommand));
+		FetchedInstructions.push(new JMP0Instruction(restOfCommand));
 	}
 	else if (command == "ass") {
-		FetchedInstructions.push(AddInstruction(restOfCommand));
+		FetchedInstructions.push(new AddInstruction(restOfCommand));
 	}
 	else if (command == "le") {
-		FetchedInstructions.push(LessThanInstruction(restOfCommand));
+		FetchedInstructions.push(new LessThanInstruction(restOfCommand));
 	}
 	else if (command == "read") {
-		FetchedInstructions.push(READInstruction(restOfCommand));
+		FetchedInstructions.push(new READInstruction(restOfCommand));
 	}
 	else if (command == "write") {
-		FetchedInstructions.push(WriteInstruction(restOfCommand));
+		FetchedInstructions.push(new WriteInstruction(restOfCommand));
 	}
 	else if (command == "halt") {
-		FetchedInstructions.push(HaltInstruction(restOfCommand));
-	}*/
+		FetchedInstructions.push(new HaltInstruction(restOfCommand));
+	}
 	else
 	{
 		std::cout << "Error. Attempt to add an Unkown Instruction\n";
