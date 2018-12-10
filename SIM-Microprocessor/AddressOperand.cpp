@@ -6,8 +6,15 @@ AddressOperand::AddressOperand()
 {
 }
 
-AddressOperand::AddressOperand(int data ) : Operand<int>(data)
+AddressOperand::AddressOperand(int data )
 {
+	if (this->ValidData(data)) {
+		this->Data = data;
+	}
+	else {
+		std::cout << "Error parsing Operand!\n";
+		exit(0);
+	}
 }
 
 
