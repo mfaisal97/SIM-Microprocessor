@@ -1,6 +1,5 @@
 #pragma once
-#include "InstructionMemory.h"
-#include "DataMemory.h"
+#include "Memory/MemoriesHeader.h"
 #include "InstructionsParser.h"
 
 class SIM

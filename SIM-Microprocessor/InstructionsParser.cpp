@@ -7,6 +7,11 @@ InstructionsParser::InstructionsParser()
 
 InstructionsParser::~InstructionsParser()
 {
+	while (FetchedInstructions.size() > 0) {
+		Instruction* fetched = FetchedInstructions.front();
+		delete fetched;
+		FetchedInstructions.pop();
+	}
 }
 
 bool InstructionsParser::AddInstructionsFromFile(std::string fileName)
@@ -16,9 +21,13 @@ bool InstructionsParser::AddInstructionsFromFile(std::string fileName)
 		while (!InputFile.eof()) {
 			std::string line;
 			std::getline(InputFile, line);
-			AddInstructionFromString(line);
+			if (line.find_first_not_of(' ') != std::string::npos)
+			{
+				AddInstructionFromString(line);
+			}
 		}
 		InputFile.close();
+		std::cout << "File Parsed Successfully.\n";
 	}
 	else {
 		std::cout << "Error Opening Input Instructions File!\n";
@@ -49,7 +58,10 @@ bool InstructionsParser::AddInstructionFromString(std::string instStr)
 		}
 	}
 
-	if (command == "add") {
+	if (command[0] == '#') {
+
+	}
+	else if (command == "add") {
 		FetchedInstructions.push(new AddInstruction(restOfCommand));
 	}
 	else if (command == "neg") {
@@ -65,7 +77,7 @@ bool InstructionsParser::AddInstructionFromString(std::string instStr)
 		FetchedInstructions.push(new JMP0Instruction(restOfCommand));
 	}
 	else if (command == "ass") {
-		FetchedInstructions.push(new AddInstruction(restOfCommand));
+		FetchedInstructions.push(new AssignmentInstruction(restOfCommand));
 	}
 	else if (command == "le") {
 		FetchedInstructions.push(new LessThanInstruction(restOfCommand));

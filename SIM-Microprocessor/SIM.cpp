@@ -1,7 +1,6 @@
 #include "SIM.h"
 
 
-
 SIM::SIM():instMem(mem)
 {
 	simRunning = true;
@@ -44,14 +43,24 @@ void SIM::ExcuteAllFetchedInstructions()
 
 void SIM::QueryMemoryData(AddressOperand addr)
 {
-	std::cout << "mem[" << *addr.GetData() << "] = " << *mem.GetDataAt(&addr) << "\n";
+	if (instMem.IsInitialized(&addr)) {
+		std::cout << "mem[" << *addr.GetData() << "] = " << *mem.GetDataAt(&addr) << "\n";
+	}
+	else {
+		std::cout << "Out of Boundary Error. Trying to read unitialized memory.\n";
+	}
 }
 
 void SIM::QueryInstMemory(AddressOperand addr)
 {
-	std::cout << "instmem[" << *addr.GetData() << "] = ";
-	instMem.GetDataAt(&addr)->Print();
-	std::cout << "\n";
+	if (instMem.IsInitialized(&addr)) {
+		std::cout << "instmem[" << *addr.GetData() << "] = ";
+		instMem.GetDataAt(&addr)->Print();
+		std::cout << "\n";
+	}
+	else {
+		std::cout << "Out of Boundary Error. Trying to read unitialized memory.\n";
+	}
 }
 
 void SIM::QueryAllInstMemory()
@@ -61,7 +70,6 @@ void SIM::QueryAllInstMemory()
 		AddressOperand addr(i);
 		std::cout << "instmem[" << *addr.GetData() << "] = ";
 		instMem.GetDataAt(&addr)->Print();
-		std::cout << "\n";
 	}
 
 }
@@ -142,6 +150,9 @@ void SIM::ParseCommand(std::string & str)
 	}
 	else if (command == "exit") {
 		simRunning = false;
+	}
+	else if (command == "") {
+
 	}
 	else {
 		std::cout << "Wrong command. Please try Again\n";

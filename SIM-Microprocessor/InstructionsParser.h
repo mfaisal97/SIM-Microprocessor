@@ -4,7 +4,7 @@
 #include <fstream>
 #include <sstream>
 #include <algorithm>
-#include "InstructionsHeader.h"
+#include "InstructionTypes/InstructionsHeader.h"
 
 
 class InstructionsParser
