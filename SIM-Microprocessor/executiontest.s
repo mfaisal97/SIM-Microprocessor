@@ -23,9 +23,9 @@ le x1,x1, x15       #16 mem[15] = 1
 le x1,x2,x16        #17 mem[16] = 1
 le x2,x1,x16        #18 mem[18] = 0
 
-read x17
-write x17
+read x17            #19
+write x17           #20
 
-halt
+halt                #21
 ass 21, x20
 ass 20, x20

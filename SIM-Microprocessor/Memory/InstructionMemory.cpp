@@ -30,11 +30,11 @@ bool InstructionMemory::ExecuteCounterInstruction()
 	if (IsInitialized(counter)) {
 		std::cout << "Executing Inst #" << *(counter->GetData()) << ":";
 		GetDataAt(counter)->Print();
-		GetDataAt(counter)->Execute(mem, *counter);
 		if (typeid(*GetDataAt(counter)) == typeid(HaltInstruction)) {
 			std::cout << "End of Instructions\n";
 			return false;
 		}
+		GetDataAt(counter)->Execute(mem, *counter);
 		return true;
 	}
 	else {
