@@ -7,19 +7,33 @@ The project provide the implementation of a class called SIM and its dependencie
 # Input instructions syntax:
 
 ADD in1, in2, out
+
 MUL in1, in2, out
+
 LE  in1, in2, out
 
+
+
 NEG in, out
+
 ASS in, out
 
+
+
 JMP a1
+
 JMP0 in1, a1
 
+
+
 READ x
+
 WRITE x
 
+
+
 HALT
+
 
 # Notes on syntax
 1) Operands can spaced seperated or comma seperated
@@ -31,10 +45,9 @@ HALT
 7) Each line has a maximum of one instruction provided that the instruction starts with the start of the line.
 8) Instructions can be written in upper cases or lower cases.
 9) Parsing consider after number text as a visual option to improve readability.
-10) 
 
 # Notes on Usage
 1) Trying to access unitialized memory address results in a warning and returning a default value (changeable in the memory class).
-2) 
-
-
+2) To know more about the constraints check Project Description Requirments
+3) There is a test file called executiontest.s that test the main Functionalities of the project to gain more insights
+4) Write help during program run to get instructions help dialogue.
